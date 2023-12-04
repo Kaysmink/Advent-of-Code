@@ -6,9 +6,9 @@ def findNeighbors(x, y):
     return [[xn, yn] for xn in range(x-1, x+2) for yn in range(y-1, y+2) if 0 <= xn < len(Input[0]) and 0 <= yn < len(Input) and (abs(x-xn) + abs(y-yn) > 0)]
 
 
-# Part 1
 Input = open("data/2023/dag 03. input.txt", "r").read().split("\n")[0:-1]
 
+# Part 1
 number_coords = [[[match.start(), match.end()] for match in re.finditer(r'\d+', line)] for line in Input]
 full_number_coords = [[[[y, x] for x in range(xmin, xmax)]
                        for xmin, xmax in number_coords[y]] for y in range(0, len(Input))]
