@@ -26,11 +26,6 @@ def map_value(value, mapping_table):
 part1 = min([seed_to_location_map(seed) for seed in seeds])
 
 
-"""
-First i reversed the mappings so the result will be the seednumber for a given locations
-"""
-
-
 def reverse_map_value(value, mapping_table):
     mappings = [list(map(int, re.findall(r'\d+', line))) for line in mapping_table.split("\n")[1::]]
 
@@ -51,14 +46,10 @@ def location_to_seed_map(value):
 
 """
 I checked for a range of locations in increments of 100.000 if there was a hit in our seed ranges
-
 the first location which had a seed which was included in our range was 27800001.
-
 next i lowered the increments to 10.000, 1.000, 100, 10 and 1 till I finally had the smallest location with a
-
 valid seed number
 """
-
 seed_ranges = [[seeds[index], seeds[index] + seeds[index + 1]] for index in range(0, len(seeds), 2)]
 part2 = 26829000
 while True:
