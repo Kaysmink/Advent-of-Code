@@ -1,7 +1,6 @@
 from shapely import geometry, Point
 from tqdm import tqdm
 
-
 Input = open("data/2023/dag 10. input.txt", "r").read().split("\n")[0:-1]
 
 maze = [list(line) for line in Input]
@@ -39,10 +38,10 @@ def walk_through_maze(current_possition, current_direction):
 
     return visited
 
+
 # part1
 path = walk_through_maze(startpoint, "N")
 part1 = len(path)//2
-
 
 # Part 2
 poly = geometry.Polygon([(x, y) for x, y in path])
