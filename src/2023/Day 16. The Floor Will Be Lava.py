@@ -46,12 +46,7 @@ def energized_tiles(current_positions):
     visited[list(current_positions)[0]] = True
 
     while current_positions:
-        new_positions = []
-        for poss in current_positions:
-            new_poss = move_lightbeams(current_positions)
-            new_positions.extend(new_poss)
-
-        current_positions = new_positions
+        current_positions = move_lightbeams(current_positions)
 
 
 def get_start_position(x, y):
