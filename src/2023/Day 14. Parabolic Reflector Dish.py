@@ -22,7 +22,7 @@ def find_next_cube_index(circle, cubes, direction):
             return len(Input)
 
 
-def move_rocks_diagonal(circles, direction):
+def move_rocks_vertical(circles, direction):
     new_coords_result = []
     for col_num in range(0, len(Input[0])):
         cube = [cube[1] for cube in cubes if cube[0] == col_num]
@@ -67,11 +67,11 @@ after running 200 iteration is became clear that after 95 iteration a cycle star
 """
 result = []
 for i in range(0, 200):
-    circles = move_rocks_diagonal(circles, "N")
+    circles = move_rocks_vertical(circles, "N")
     if i == 0:
         part1 = sum([len(Input) - y for x, y in circles])
     circles = move_rocks_horizontal(circles, "W")
-    circles = move_rocks_diagonal(circles, "S")
+    circles = move_rocks_vertical(circles, "S")
     circles = move_rocks_horizontal(circles, "E")
 
     result.append(sum([len(Input) - y for x, y in circles]))
