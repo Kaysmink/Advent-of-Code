@@ -31,7 +31,6 @@ def walk_through_maze(Input, current_position, current_direction, new_block=Fals
 
             blocks.add((xn, yn, current_direction))
             current_direction = new_direction_dict[current_direction]
-
             continue
 
         current_position = (xn, yn)
@@ -45,7 +44,6 @@ part1 = walk_through_maze(Input, current_position, current_direction)
 new_blocks = [(x, y) for x in range(
     len(Input[0])) for y in range(len(Input)) if Input[y][x] not in ["#", "<", ">", "^", "v"]]
 
-part2 = [walk_through_maze(Input, current_position, current_direction, index, new_block)
-         for index, new_block in enumerate(new_blocks)]
+part2 = [walk_through_maze(Input, current_position, current_direction, new_block) for new_block in new_blocks]
 
 print(part1, part2.count("LOOP"))
