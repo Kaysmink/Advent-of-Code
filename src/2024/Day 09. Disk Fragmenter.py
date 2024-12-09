@@ -18,11 +18,9 @@ def file_fragmentation_part1(ids, emptyPlaces):
         n = emptyPlaces.pop(0)
         fill = []
         for _ in range(n):
-            last = ids[-1]
-            if len(last) == 0:
+            if len(ids[-1]) == 0:
                 ids.pop()
-            last = ids[-1]
-            fill.append(last.pop())
+            fill.append(ids[-1].pop())
         if index < len(ids):
             file.append(ids[index])
 
