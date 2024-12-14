@@ -32,19 +32,13 @@ maxY = 103
 part1 = safety_factor([do_step(position, steps[index], 100) for index, position in enumerate(current_positions)])
 
 # Part 2
-sec = 1
 minScore = 1000000000000000000000
-while True:
+for sec in range(10000):
     safety_score = safety_factor([do_step(position, steps[index], sec)
                                  for index, position in enumerate(current_positions)])
 
     if safety_score < minScore:
         minScore = safety_score
         part2 = sec
-
-    if sec > 10000:
-        break
-
-    sec = sec + 1
 
 print(part1, part2)
