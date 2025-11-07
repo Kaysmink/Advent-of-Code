@@ -13,17 +13,7 @@ def check_nice(part, string):
     repeat = re.search(r'([a-zA-Z]{2}).*?\1', string)
     twice = re.search(r'([a-zA-Z]).\1', string)
 
-    if part == 1:
-        if all([num_vowels, is_forbidden, double]):
-            return True
-
-        return False
-
-    if part == 2:
-        if all([repeat, twice]):
-            return True
-
-        return False
+    return all([num_vowels, is_forbidden, double]) if part==1 else all([repeat, twice])
 
 
 part1 = sum([check_nice(1, string) for string in Input])
