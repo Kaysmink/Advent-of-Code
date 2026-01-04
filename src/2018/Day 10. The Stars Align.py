@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Oct 23 13:43:42 2021
-
-@author: kaysm
-"""
-
 from collections import defaultdict
 from copy import deepcopy
 import pandas as pd

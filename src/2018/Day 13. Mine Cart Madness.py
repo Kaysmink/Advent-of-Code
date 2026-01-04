@@ -1,11 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 29 11:39:08 2021
-
-@author: kaysm
-"""
-
-from collections import defaultdict 
+from collections import defaultdict
 
 Input = open("data/day 13. input.txt", "r").read().split("\n")[:-1]
 Input = [list(line) for line in Input]

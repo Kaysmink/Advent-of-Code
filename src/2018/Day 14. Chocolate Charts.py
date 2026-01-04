@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Oct 30 14:35:16 2021
-
-@author: kaysm
-"""
-
 Input = int(open("data/day 14. input.txt", "r").read())
 
 scores = "37"

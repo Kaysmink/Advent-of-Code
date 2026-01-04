@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Oct 24 15:21:43 2021
-
-@author: kaysm
-"""
-
 serialNumber=int(open("data/day 11. input.txt", "r").read())
 
 def calculate_power_level(x,y):
